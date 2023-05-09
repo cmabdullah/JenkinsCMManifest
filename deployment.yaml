@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+  namespace: default
+  labels:
+    app: hello-deployment
+spec:
+  selector:
+    matchLabels:
+      app: hello-deployment
+  template:
+    metadata:
+      labels:
+        app: hello-deployment
+    spec:
+      containers:
+        - name: hello-service
+          image: cmabdullah21/jenkins-manifest:1
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "1024Mi"
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
