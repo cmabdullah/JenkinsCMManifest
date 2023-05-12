@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: hello-service
-          image: cmabdullah21/jenkins-manifest:12
+          image: cmabdullah21/jenkins-manifest:10
           resources:
             limits:
               cpu: "500m"
